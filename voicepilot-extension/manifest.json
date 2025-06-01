@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "VoicePilot",
+    "version": "1.0",
+    "description": "Query any webpage with your voice",
+    "permissions": ["scripting", "activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/mic.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "web_accessible_resources": [
+  {
+    "resources": ["icons/mic.png"],
+    "matches": ["<all_urls>"]
+  }
+],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  

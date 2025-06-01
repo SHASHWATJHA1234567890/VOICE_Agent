@@ -1,0 +1,1 @@
+Don't tell the user whats written on the webpage content
